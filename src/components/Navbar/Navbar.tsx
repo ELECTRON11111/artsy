@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Navbar(props: any) {
     return (
-        <div className="flex w-full justify-between py-4 px-2 sm:px-12 sm:py-6">
+        <div className="flex w-full justify-between py-4 px-2 sm:px-20 sm:py-6">
             <svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg" id="burger-btn" className="cursor-pointer sm:hidden" onClick={props.showSidebarHandler}>
                <path d="M10 24.5H29.0312M10 17.25H29.0312M10 10H29.0312" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
 
             <h3 className="self-end text-[24px] font-bold font-artsy select-none">ARTSY.</h3>
 
-            <nav className="hidden sm:flex gap-4 font-body">
+            <nav className="hidden sm:flex gap-4 font-body sm:gap-5 md:gap-12">
                 <Link href="#" className="active hover:border-b-4 hover:border-black animate">Home</Link>
                 <Link href="#" className="hover:border-b-4 hover:border-black animate">Marketplace</Link>
                 <Link href="#" className="hover:border-b-4 hover:border-black animate">Auctions</Link>
