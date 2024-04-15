@@ -34,7 +34,7 @@ const HomeContent = () => {
                 priority unoptimized = {true}
             />
 
-            <div className="hidden sm:flex sm:gap-1 " id="DesktopHomeImages">
+            <div className="hidden sm:flex sm:gap-1 relative right-6" id="DesktopHomeImages">
                 <Image 
                     src={homeImg1Src}
                     width={"380"} height={"505"}
@@ -65,17 +65,19 @@ const HomeContent = () => {
                     src={homeImg5Src}
                     width={"357"} height={"505"}
                     alt=""
+                    className="lg:relative lg:right-4"
                     priority unoptimized = {true}
                 />
             </div>
 
             <div id="featured-products" className="py-20 flex flex-col gap-3">
-                <h2 className="font-[700] text-[28px] font-body py-8 pb-4">Featured products</h2>
+                <h2 className="font-[700] text-[28px] font-body py-8 pb-4 md:ml-16">Featured products</h2>
 
                 <FeaturedProduct 
                     name={"Oloibiri 1997"}
                     imgUrl={'/images/featured-product-1.png'}
                     noOfCreators={64}
+                    reverse={false}
                     description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur "}
                 />
 
@@ -83,6 +85,7 @@ const HomeContent = () => {
                     name={"Oloibiri 1997"}
                     imgUrl={'/images/featured-product-1.png'}
                     noOfCreators={64}
+                    reverse={true}
                     description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur "}
                 />
 
@@ -90,6 +93,7 @@ const HomeContent = () => {
                     name={"Oloibiri 1997"}
                     imgUrl={'/images/featured-product-1.png'}
                     noOfCreators={64}
+                    reverse={false}
                     description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur "}
                 />
             </div>
