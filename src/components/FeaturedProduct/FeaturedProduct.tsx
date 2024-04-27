@@ -4,6 +4,7 @@ import avatar2 from "../../../public/images/people/Ellipse 20.png";
 import avatar3 from "../../../public/images/people/Ellipse 21.png";
 import avatar4 from "../../../public/images/people/Ellipse 22.png";
 import avatar5 from "../../../public/images/people/Ellipse 23.png";
+import { useEffect } from "react";
 
 interface propType {
     imgUrl: string,
@@ -14,8 +15,15 @@ interface propType {
 }
 
 export default function FeaturedProduct(props: propType) {
+    let reverse:any = "flex-row";
+
+    useEffect(() => {
+        const reverse = props.reverse? "flex-row": "flex-row-reverse";
+        console.log(reverse);
+    }, [])
+
     return (
-        <div id="item" className={`my-4 flex flex-col gap-2 md:${props.reverse? "flex-row-reverse":"flex-row"} md:gap-4 md:border-t 
+        <div id="item" className={`my-4 flex flex-col gap-2 md:flex-row-reverse md:${reverse} md:gap-4 md:border-t 
         md:border-black md:pt-8 md:pb-5 md:my-0 md:mx-10 lg:mx-16`}>
             <div id="img-card" className={`bg-[url('/images/featured-product-1.png')] bg-cover w-[90vw] h-[255px] md:w-[50vw] md:h-[305px]`}>
                 <div className="bg-black bg-opacity-50 h-full flex flex-col justify-evenly items-center md:hidden">
