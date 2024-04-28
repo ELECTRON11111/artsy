@@ -5,7 +5,7 @@ export default function NewsLetter() {
     const year = new Date().getFullYear();
 
     return (
-        <div className="pt-20" id="NewsLetter">
+        <div className="pt-20 mt-5" id="NewsLetter">
             <div className="md:py-6 md:px-4 md:border md:border-black md:mx-4 md:flex md:flex-col md:items-center">
                 <h1 className="font-baskervville text-[24px] font-semibold py-2">NEWSLETTER</h1>
                 
